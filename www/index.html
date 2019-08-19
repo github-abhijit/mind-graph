@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="jsnetworkx.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js" charset="utf-8"></script>
+    <script src="displaygraph.js"></script>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.label {
+  color: black;
+  padding: 4px;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.button {
+  background-color: rgb(0, 102, 255); /* Green */
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 8px;
+  margin: 10px 2px;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+p.top {
+  border: 0.5px solid rgb(69, 171, 255);
+  padding: 10px 10px;
+  background-color: rgb(213, 230, 255);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(102, 186, 255);
+  overflow-x: hidden;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+</style>
+<body onload=showData()>
+<!-- <body> -->
+  <div class="sidenav">
+<form>
+    <p class="top">
+    <span class="label">Thought</span>
+    <input type="text" id="thought" value="">
+    <span class="label">Attach to</span>
+    <input type="text" id="link" value="">
+    <button class="button" onclick="myFunction()">Add</button>
+    <button class="button" onclick=showData()>Show</button>
+  </p>
+</form>
+<div id="reply"></div>
+</div>
+<div class="content" id="canvas"></div>
+<script>
+function myFunction() {
+  var myObj, myJSON, text, obj;
+  var node = document.getElementById("thought").value;
+  var edge = document.getElementById("link").value;
+  sendData(node, edge)
+  addToGraph(node, edge)
+}
+function showData () {
+  console.log("Test")
+  DisplayData()
+  //window.open("./example.html");
+}
+</script>
+
+</body>
+</html>

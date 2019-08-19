@@ -1,0 +1,49 @@
+{
+ "abhijit": [
+  "office",
+  "health",
+  "parents",
+  "personal",
+  "baby",
+  "newNode"
+ ],
+ "baby": [
+  "hospital",
+  "expenses",
+  "planning",
+  "leaves"
+ ],
+ "health": [
+  "yoga",
+  "meditation",
+  "pranayam"
+ ],
+ "newNode": [
+  "something",
+  "second",
+  "third",
+  "fourth",
+  "fifth",
+  "sixth",
+  "first",
+  "seventh",
+  "eight",
+  "nine",
+  "ten",
+  "eleven",
+  "twelve",
+  "thirteen",
+  "fourteen",
+  "fifteen",
+  "sixteen",
+  "seventeen",
+  "eighteen",
+  "nineteen"
+ ],
+ "personal": [
+  "reading",
+  "gym",
+  "game",
+  "entertainment"
+ ]
+}
