@@ -3,9 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="jsnetworkx.js"></script>
-    <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js" charset="utf-8"></script>
-    <script src="displaygraph.js"></script>
+    <script type="text/javascript" src="scripts/jsnetworkx.js"></script>
+    <script src="scripts/displaygraph.js"></script>
 </head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,8 +73,8 @@ body {
     <input type="text" id="thought" value="">
     <span class="label">Attach to</span>
     <input type="text" id="link" value="">
-    <button class="button" onclick="myFunction()">Add</button>
-    <button class="button" onclick=showData()>Show</button>
+    <button class="button" type="button" onclick="myFunction()">Add</button>
+    <button class="button" type="button" onclick="showData()">Show</button>
   </p>
 </form>
 <div id="reply"></div>
